@@ -17,19 +17,26 @@ class TextFieldInput extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextFormField(
-      controller: textEditingController,
-      decoration: InputDecoration(
-          hintText: hintText,
-          border: OutlineInputBorder(
-              borderSide: Divider.createBorderSide(context))),
-      obscureText: isPass,
-      keyboardType: textInputType,
-      validator: (val) => isPass
-          ? (val!.length < 8
-              ? 'Password must be longer than 8 characters'
-              : null)
-          : (val!.isEmpty ? 'Enter a valid email' : null),
+    return Container(
+      padding: const EdgeInsets.only(left: 15.0),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: TextFormField(
+        controller: textEditingController,
+        decoration: InputDecoration(
+            fillColor: Colors.white,
+            hintText: hintText,
+            border: InputBorder.none),
+        obscureText: isPass,
+        keyboardType: textInputType,
+        validator: (val) => isPass
+            ? (val!.length < 8
+                ? 'Password must be longer than 8 characters'
+                : null)
+            : (val!.isEmpty ? 'Enter a valid email' : null),
+      ),
     );
   }
 }

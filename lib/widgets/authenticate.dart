@@ -1,4 +1,4 @@
-import 'package:flutter/src/foundation/key.dart';
+/*import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:social_media_app/views/login.dart';
 import 'package:social_media_app/views/signup.dart';
@@ -27,4 +27,4 @@ class _AuthenticateState extends State<Authenticate> {
       return SignUpPage(toggleView: toggleView);
     }
   }
-}
+}*/
